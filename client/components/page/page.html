@@ -1,0 +1,23 @@
+<template name="page">
+  {{> nav}}
+  <h1>Im the page {{page.title}}</h1>
+  {{#with page}}
+    {{#each elements}}
+      {{component}}
+     {{> UI.dynamic template=component}}
+    {{/each}}
+  {{/with}}
+</template>
+
+
+<template name="component">
+  <h1>HI</h1>
+</template>
+
+
+
+<template name="TextBlock">
+  <h1>TB</h1>
+</template>
+
+
